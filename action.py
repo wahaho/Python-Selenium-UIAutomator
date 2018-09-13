@@ -4,8 +4,8 @@ import time
 
 # 用户登录
 def login_(driver):
-    user = ''
-    pw = ''
+    user = '***'
+    pw = '***'
 
     driver.find_element_by_css_selector(".login-button.js-kmf-login.hollow-button").click()
     inputuser = driver.find_element_by_id("LoginPopupName")
