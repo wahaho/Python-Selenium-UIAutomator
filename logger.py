@@ -13,7 +13,14 @@ ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 
 # 定义handler的输出格式
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s - %(thread)d')
+# 1、不同级别日志信息
+# formatter = {
+#             1:logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s - %(thread)d'),
+#             2:logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s - %(thread)d'),
+#             3:logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s - %(thread)d')
+#              }
+
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 fh.setFormatter(formatter)
 ch.setFormatter(formatter)
 
@@ -21,14 +28,13 @@ ch.setFormatter(formatter)
 logger.addHandler(fh)
 logger.addHandler(ch)
 
-# 记录一条日志
-# Logger.setLevel(lvl)  级别高低顺序：NOTSET < DEBUG < INFO < WARNING < ERROR < CRITICAL
+# 记录一条日志    Logger.setLevel(lvl)  级别高低顺序：NOTSET < DEBUG < INFO < WARNING < ERROR < CRITICAL
 logger.info('foorbar')
-logger.debug('debug')
-logger.info("foobar")
-logger.warning("foobar")
-logger.error("foobar")
-logger.critical("foobar")
+# logger.debug('debug')
+# logger.info("foobar")
+# logger.warning("foobar")
+# logger.error("foobar")
+# logger.critical("foobar")
 
 # Logger.addHandler(hdlr)
 # StreamHandler: 输出到控制台
