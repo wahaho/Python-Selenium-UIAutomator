@@ -4,7 +4,13 @@ class Logger():
     def __init__(self, logname, loglevel, logger):
         '''
             指定保存日志的文件路径，日志级别，以及调用文件
-            将日志存入到指定的文件中
+            Level	Numeric value
+            CRITICAL	50
+            ERROR	    40
+            WARNING	    30
+            INFO	    20
+            DEBUG	    10
+            NOTSET	    0
         '''
 
         # 创建一个logger
@@ -39,5 +45,9 @@ class Logger():
         return self.logger
 
 # 再通过以下方式调用，便是一个简单的日志系统了
-logger = Logger(logname='log.txt', loglevel=1, logger="fox").getlog()
+logger = Logger(logname='/Users/xiaoweiyu/PycharmProjects/Python-Selenium-UIAutomator/log/log.txt',
+                loglevel=1, logger="fox").getlog()
+
+
+
 
